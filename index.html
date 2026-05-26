@@ -206,8 +206,8 @@ client = AsyncOpenAI()
       <div class="portfolio">
 
         <div class="pcard">
-          <div class="pcard__img pcard__img--1">
-            <div class="mock">
+          <div class="pcard__img pcard__img--1" id="img-shelterly">
+            <div class="mock" id="mock-shelterly">
               <div class="mock__bar">
                 <div class="mock__dots">
                   <span></span><span></span><span></span>
@@ -234,30 +234,30 @@ client = AsyncOpenAI()
             <span class="pcard__type">💳 SaaS-бот</span>
           </div>
           <div class="pcard__body">
-            <h3 class="pcard__title">Shelterly Admin — VPN-сервис</h3>
-            <p class="pcard__text">Бот для управления подписками VPN-сервиса. Оплата, тарифы, личный кабинет, автоматическое управление доступом, статистика для администратора.</p>
+            <h3 class="pcard__title">Shelterly — VPN-сервис</h3>
+            <p class="pcard__text">Telegram-бот + сайт для VPN-сервиса. Оплата, тарифы, личный кабинет, автоматическое управление доступом через 3x-ui, статистика для администратора.</p>
             <div class="pcard__tags">
               <span class="tag">aiogram 3</span>
               <span class="tag">ЮKassa</span>
-              <span class="tag">PostgreSQL</span>
+              <span class="tag">FastAPI</span>
             </div>
+            <a href="https://shelterly.ru" target="_blank" class="card__link">Посмотреть →</a>
           </div>
         </div>
 
         <div class="pcard">
-          <div class="pcard__img pcard__img--2">
-            <div class="mock">
+          <div class="pcard__img pcard__img--2" id="img-brandato">
+            <div class="mock" id="mock-brandato">
               <div class="mock__bar">
                 <div class="mock__dots">
                   <span></span><span></span><span></span>
                 </div>
-                <span class="mock__title">Brandato</span>
+                <span class="mock__title">brandato.ru</span>
               </div>
               <div class="mock__chips">
-                <span class="mock__chip mock__chip--active">Все</span>
+                <span class="mock__chip mock__chip--active">Все бренды</span>
                 <span class="mock__chip">Одежда</span>
                 <span class="mock__chip">Обувь</span>
-                <span class="mock__chip">Аксессуары</span>
               </div>
               <div class="mock__grid">
                 <div class="mock__product mock__product--1"></div>
@@ -266,27 +266,28 @@ client = AsyncOpenAI()
                 <div class="mock__product mock__product--4"></div>
               </div>
             </div>
-            <span class="pcard__type">📱 Mini App</span>
+            <span class="pcard__type">🌐 Веб-сайт</span>
           </div>
           <div class="pcard__body">
             <h3 class="pcard__title">Brandato — платформа брендов</h3>
-            <p class="pcard__text">Мини-приложение внутри Telegram с каталогом, фильтрацией и личным кабинетом. Интеграция с FastAPI-бэкендом, авторизация через Telegram.</p>
+            <p class="pcard__text">Сайт-платформа для брендов с каталогом, фильтрацией и личным кабинетом. FastAPI-бэкенд, авторизация, административная панель.</p>
             <div class="pcard__tags">
               <span class="tag">React</span>
               <span class="tag">FastAPI</span>
-              <span class="tag">Telegram Web App SDK</span>
+              <span class="tag">PostgreSQL</span>
             </div>
+            <a href="https://brandato.ru" target="_blank" class="card__link">Посмотреть →</a>
           </div>
         </div>
 
         <div class="pcard">
-          <div class="pcard__img pcard__img--3">
-            <div class="mock">
+          <div class="pcard__img pcard__img--3" id="img-bamboovpn">
+            <div class="mock" id="mock-bamboovpn">
               <div class="mock__bar">
                 <div class="mock__dots">
                   <span></span><span></span><span></span>
                 </div>
-                <span class="mock__title">BambooVPN · Swagger UI</span>
+                <span class="mock__title">BambooVPN · API</span>
               </div>
               <div class="mock__endpoint">
                 <span class="mock__method mock__method--get">GET</span>
@@ -305,16 +306,17 @@ client = AsyncOpenAI()
                 <span class="mock__path">/api/v1/keys/{id}</span>
               </div>
             </div>
-            <span class="pcard__type">⚙️ FastAPI бэкенд</span>
+            <span class="pcard__type">⚙️ FastAPI + сайт</span>
           </div>
           <div class="pcard__body">
-            <h3 class="pcard__title">BambooVPN — REST API</h3>
-            <p class="pcard__text">Бэкенд для VPN-сервиса: управление пользователями, подписками, ключами доступа. JWT-авторизация, документация Swagger, деплой на VPS.</p>
+            <h3 class="pcard__title">BambooVPN — VPN-сервис</h3>
+            <p class="pcard__text">Полноценный VPN-сервис: FastAPI-бэкенд, Telegram-бот с оплатой, лендинг. JWT-авторизация, управление подписками и ключами, деплой на VPS.</p>
             <div class="pcard__tags">
               <span class="tag">FastAPI</span>
-              <span class="tag">SQLAlchemy</span>
+              <span class="tag">aiogram 3</span>
               <span class="tag">Docker</span>
             </div>
+            <a href="https://bamboovpn.ru" target="_blank" class="card__link">Посмотреть →</a>
           </div>
         </div>
 

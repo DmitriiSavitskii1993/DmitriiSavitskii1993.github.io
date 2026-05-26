@@ -502,6 +502,16 @@ body {
 .pcard__img--2 { background: linear-gradient(145deg, #1a0d37 0%, #3d1a70 60%, #2a0d55 100%); }
 .pcard__img--3 { background: linear-gradient(145deg, #0a1a35 0%, #0f2d5c 60%, #0a2040 100%); }
 
+/* Реальные скриншоты (когда появятся в img/) */
+.pcard__img--has-screenshot {
+  background-size: cover;
+  background-position: top center;
+}
+.pcard__img--has-screenshot .mock { display: none; }
+#img-shelterly.pcard__img--has-screenshot   { background-image: url('img/shelterly.jpg'); }
+#img-brandato.pcard__img--has-screenshot    { background-image: url('img/brandato.jpg'); }
+#img-bamboovpn.pcard__img--has-screenshot   { background-image: url('img/bamboovpn.jpg'); }
+
 .pcard__type {
   position: relative;
   z-index: 2;
