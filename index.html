@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дмитрий — Разработка Telegram-ботов и бэкендов</title>
+  <meta name="description" content="Разрабатываю Telegram-боты с ИИ, SaaS-боты с оплатой, мини-приложения и FastAPI-бэкенды. Владивосток, работаю удалённо." />
+  <meta property="og:title" content="Дмитрий — Разработка Telegram-ботов и бэкендов" />
+  <meta property="og:description" content="Умные боты с ИИ, SaaS с оплатой, мини-приложения, FastAPI-бэкенды. От идеи до деплоя — под ключ." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dmitriisavitskii1993.github.io" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <span class="nav__logo">Дмитрий<span class="accent">.</span>dev</span>
+      <div class="nav__links">
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#portfolio" class="nav__link">Портфолио</a>
+        <a href="#how" class="nav__link">Процесс</a>
+      </div>
+      <a href="https://t.me/dmitrii_intake_bot" target="_blank" class="btn btn--sm">Оставить заявку</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+
+        <div class="hero__left">
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Открыт для новых проектов
+          </div>
+          <h1 class="hero__title">
+            Разрабатываю<br />
+            <span class="accent" id="typewriter">Telegram-боты</span><br />
+            и бэкенды на Python
+          </h1>
+          <p class="hero__sub">
+            Умные боты с ИИ, SaaS с оплатой, мини-приложения, FastAPI-бэкенды.<br />
+            От идеи до деплоя — под ключ.
+          </p>
+          <div class="hero__cta">
+            <a href="https://t.me/dmitrii_intake_bot" target="_blank" class="btn btn--lg">
+              💬 Обсудить проект
+            </a>
+            <a href="#portfolio" class="btn btn--lg btn--ghost">Примеры работ ↓</a>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__num"><span class="counter" data-target="5">0</span>+</span>
+              <span class="stat__label">проектов сдано</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">1 день</span>
+              <span class="stat__label">среднее время ответа</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">VVO</span>
+              <span class="stat__label">Владивосток (+7 МСК)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="hero__code-card">
+            <div class="code-card__header">
+              <span class="code-dot code-dot--red"></span>
+              <span class="code-dot code-dot--yellow"></span>
+              <span class="code-dot code-dot--green"></span>
+              <span class="code-card__file">bot.py</span>
+            </div>
+            <pre class="code-card__body"><code><span class="c-kw">from</span> <span class="c-mod">aiogram</span> <span class="c-kw">import</span> Bot, Dispatcher
+<span class="c-kw">from</span> <span class="c-mod">openai</span> <span class="c-kw">import</span> AsyncOpenAI
+
+client = AsyncOpenAI()
+
+<span class="c-fn">@dp.message()</span>
+<span class="c-kw">async def</span> <span class="c-fn">ai_reply</span>(msg: Message):
+    response = <span class="c-kw">await</span> client.chat.completions.create(
+        model=<span class="c-str">"gpt-4o"</span>,
+        messages=[{
+            <span class="c-str">"role"</span>: <span class="c-str">"user"</span>,
+            <span class="c-str">"content"</span>: msg.text
+        }]
+    )
+    <span class="c-kw">await</span> msg.answer(
+        response.choices[<span class="c-num">0</span>].message.content
+    )</code></pre>
+          </div>
+          <div class="hero__float hero__float--1">⚡ Деплой за 1 день</div>
+          <div class="hero__float hero__float--2">🤖 aiogram 3.x</div>
+          <div class="hero__float hero__float--3">🔒 Production-ready</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="stack-section">
+    <div class="container">
+      <p class="stack-section__label">Стек технологий</p>
+      <div class="stack">
+        <div class="stack__item"><span>🐍</span><span>Python 3.12</span></div>
+        <div class="stack__item"><span>✈️</span><span>aiogram 3</span></div>
+        <div class="stack__item"><span>⚡</span><span>FastAPI</span></div>
+        <div class="stack__item"><span>⚛️</span><span>React</span></div>
+        <div class="stack__item"><span>🐘</span><span>PostgreSQL</span></div>
+        <div class="stack__item"><span>🐳</span><span>Docker</span></div>
+        <div class="stack__item"><span>🔴</span><span>Redis</span></div>
+        <div class="stack__item"><span>🧠</span><span>OpenAI / Claude</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section__title">Что я делаю</h2>
+      <p class="section__sub">Пять направлений — выбери нужное или напиши, разберёмся вместе</p>
+      <div class="services">
+
+        <div class="card">
+          <div class="card__icon">🤖</div>
+          <h3 class="card__title">Умный бот с ИИ</h3>
+          <p class="card__text">Бот на базе ChatGPT или Claude API — отвечает на вопросы, принимает заявки, продаёт. Знает о вашем бизнесе, общается в нужном тоне.</p>
+          <div class="card__tags">
+            <span class="tag">aiogram 3</span>
+            <span class="tag">OpenAI</span>
+            <span class="tag">Claude API</span>
+          </div>
+          <div class="card__price">от 2 400 ₽</div>
+          <a href="https://t.me/dmitrii_intake_bot" target="_blank" class="card__link">Заказать →</a>
+        </div>
+
+        <div class="card card--accent">
+          <div class="card__badge">Популярное</div>
+          <div class="card__icon">💳</div>
+          <h3 class="card__title">Бот с подпиской и оплатой</h3>
+          <p class="card__text">Продаёт доступ к курсу, каналу или сервису. Тарифы, ЮKassa, личный кабинет, реферальная система, управление подписками.</p>
+          <div class="card__tags">
+            <span class="tag">aiogram 3</span>
+            <span class="tag">ЮKassa</span>
+            <span class="tag">SQLite</span>
+          </div>
+          <div class="card__price">от 3 200 ₽</div>
+          <a href="https://t.me/dmitrii_intake_bot" target="_blank" class="card__link">Заказать →</a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">📱</div>
+          <h3 class="card__title">Мини-приложение в Telegram</h3>
+          <p class="card__text">Полноценное веб-приложение внутри Telegram — каталог, корзина, запись на услуги, личный кабинет. React + FastAPI.</p>
+          <div class="card__tags">
+            <span class="tag">React</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Telegram Web App</span>
+          </div>
+          <div class="card__price">от 2 800 ₽</div>
+          <a href="https://t.me/dmitrii_intake_bot" target="_blank" class="card__link">Заказать →</a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">⚙️</div>
+          <h3 class="card__title">Бэкенд на FastAPI</h3>
+          <p class="card__text">REST API с авторизацией, базой данных и документацией Swagger. Для сайта, мобильного приложения или интеграции сервисов.</p>
+          <div class="card__tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">JWT</span>
+          </div>
+          <div class="card__price">от 2 400 ₽</div>
+          <a href="https://t.me/dmitrii_intake_bot" target="_blank" class="card__link">Заказать →</a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">🔧</div>
+          <h3 class="card__title">Доработка и починка бота</h3>
+          <p class="card__text">Починю упавший бот, добавлю новый функционал, обновлю с aiogram 2 на 3, настрою деплой на сервер. Быстро и без лишних вопросов.</p>
+          <div class="card__tags">
+            <span class="tag">aiogram 2/3</span>
+            <span class="tag">telebot</span>
+            <span class="tag">VPS</span>
+          </div>
+          <div class="card__price">от 800 ₽</div>
+          <a href="https://t.me/dmitrii_intake_bot" target="_blank" class="card__link">Заказать →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="section section--dark" id="portfolio">
+    <div class="container">
+      <h2 class="section__title">Примеры работ</h2>
+      <p class="section__sub">Реальные проекты которые работают прямо сейчас</p>
+      <div class="portfolio">
+
+        <div class="pcard">
+          <div class="pcard__img pcard__img--1">
+            <div class="mock">
+              <div class="mock__bar">
+                <div class="mock__dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="mock__title">Shelterly VPN</span>
+              </div>
+              <div class="mock__row">
+                <span class="mock__label">Подписка</span>
+                <span class="mock__status mock__status--green">● Активна</span>
+              </div>
+              <div class="mock__row">
+                <span class="mock__label">Тариф</span>
+                <span class="mock__val">PRO · 30 дней</span>
+              </div>
+              <div class="mock__row">
+                <span class="mock__label">Ключ</span>
+                <span class="mock__val mock__mono">vless://••••••</span>
+              </div>
+              <div class="mock__btns">
+                <span class="mock__btn mock__btn--fill">💳 Продлить</span>
+                <span class="mock__btn">Тарифы</span>
+              </div>
+            </div>
+            <span class="pcard__type">💳 SaaS-бот</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__title">Shelterly Admin — VPN-сервис</h3>
+            <p class="pcard__text">Бот для управления подписками VPN-сервиса. Оплата, тарифы, личный кабинет, автоматическое управление доступом, статистика для администратора.</p>
+            <div class="pcard__tags">
+              <span class="tag">aiogram 3</span>
+              <span class="tag">ЮKassa</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard">
+          <div class="pcard__img pcard__img--2">
+            <div class="mock">
+              <div class="mock__bar">
+                <div class="mock__dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="mock__title">Brandato</span>
+              </div>
+              <div class="mock__chips">
+                <span class="mock__chip mock__chip--active">Все</span>
+                <span class="mock__chip">Одежда</span>
+                <span class="mock__chip">Обувь</span>
+                <span class="mock__chip">Аксессуары</span>
+              </div>
+              <div class="mock__grid">
+                <div class="mock__product mock__product--1"></div>
+                <div class="mock__product mock__product--2"></div>
+                <div class="mock__product mock__product--3"></div>
+                <div class="mock__product mock__product--4"></div>
+              </div>
+            </div>
+            <span class="pcard__type">📱 Mini App</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__title">Brandato — платформа брендов</h3>
+            <p class="pcard__text">Мини-приложение внутри Telegram с каталогом, фильтрацией и личным кабинетом. Интеграция с FastAPI-бэкендом, авторизация через Telegram.</p>
+            <div class="pcard__tags">
+              <span class="tag">React</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Telegram Web App SDK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard">
+          <div class="pcard__img pcard__img--3">
+            <div class="mock">
+              <div class="mock__bar">
+                <div class="mock__dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="mock__title">BambooVPN · Swagger UI</span>
+              </div>
+              <div class="mock__endpoint">
+                <span class="mock__method mock__method--get">GET</span>
+                <span class="mock__path">/api/v1/users/me</span>
+              </div>
+              <div class="mock__endpoint">
+                <span class="mock__method mock__method--post">POST</span>
+                <span class="mock__path">/api/v1/subscriptions</span>
+              </div>
+              <div class="mock__endpoint">
+                <span class="mock__method mock__method--get">GET</span>
+                <span class="mock__path">/api/v1/keys/{id}</span>
+              </div>
+              <div class="mock__endpoint">
+                <span class="mock__method mock__method--del">DEL</span>
+                <span class="mock__path">/api/v1/keys/{id}</span>
+              </div>
+            </div>
+            <span class="pcard__type">⚙️ FastAPI бэкенд</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__title">BambooVPN — REST API</h3>
+            <p class="pcard__text">Бэкенд для VPN-сервиса: управление пользователями, подписками, ключами доступа. JWT-авторизация, документация Swagger, деплой на VPS.</p>
+            <div class="pcard__tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">SQLAlchemy</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="container">
+      <h2 class="section__title">Как это работает</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">01</div>
+          <h3 class="step__title">Вы заполняете анкету</h3>
+          <p class="step__text">Напишите боту — он задаст 5 вопросов о проекте. Занимает 2 минуты.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <h3 class="step__title">Я делаю оценку</h3>
+          <p class="step__text">В течение нескольких часов свяжусь с вами, уточню детали и назову стоимость.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <h3 class="step__title">Разрабатываем и сдаём</h3>
+          <p class="step__text">Пишу код, держу в курсе прогресса, деплою на сервер и передаю проект.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title">Есть задача? Давайте обсудим</h2>
+      <p class="cta-section__sub">Заполните короткую анкету — отвечу в тот же день</p>
+      <a href="https://t.me/dmitrii_intake_bot" target="_blank" class="btn btn--lg btn--white">
+        💬 Написать боту
+      </a>
+      <p class="cta-section__or">или напрямую в Telegram: <a href="https://t.me/dmitrii_freelance" target="_blank" class="accent">@dmitrii_freelance</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <span>Дмитрий · Разработка Telegram-ботов и бэкендов · Владивосток</span>
+      <span>
+        <a href="https://kwork.ru/user/dmitrii_freelance" target="_blank" class="footer__link">Kwork</a>
+        · <a href="https://t.me/dmitrii_freelance" target="_blank" class="footer__link">Telegram</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
